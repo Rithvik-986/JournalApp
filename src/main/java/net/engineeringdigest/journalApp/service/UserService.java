@@ -35,18 +35,6 @@ public class UserService {
 
     }
 
-    public List<User> getAll(){
-        return userRepository.findAll();
-    }
-
-    public Optional<User> findById(ObjectId id){
-        return userRepository.findById(id);
-    }
-
-    public void deleteById(ObjectId id){
-        userRepository.deleteById(id);
-    }
-
     public void deleteByUserName(String username){
         userRepository.deleteByUserName(username);
     }
