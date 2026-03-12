@@ -23,7 +23,7 @@ public class PublicController {
     public ResponseEntity<?> createUser(@RequestBody User user){
         User curr = userService.findByUserName(user.getUserName());
         if(curr!=null) return new ResponseEntity<>(HttpStatus.ALREADY_REPORTED);
-        userService.saveNewEntry(user);
+        userService.saveNewUser(user);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
